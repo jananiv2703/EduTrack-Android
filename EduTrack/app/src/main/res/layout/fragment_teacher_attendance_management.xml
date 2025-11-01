@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/teacher_id_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendance Management"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:padding="16dp"
+            android:fontFamily="sans-serif-medium" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Class Dropdown -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/class_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Select Class"
+        app:boxStrokeColor="#4B5EAA"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:hintTextColor="#4B5EAA"
+        app:endIconMode="dropdown_menu"
+        app:endIconTint="#4B5EAA"
+        app:endIconDrawable="@android:drawable/arrow_down_float"
+        app:layout_constraintTop_toBottomOf="@id/header_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/section_layout"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/class_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:inputType="none"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#1A1A1A"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Section Dropdown -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/section_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Select Section"
+        app:boxStrokeColor="#4B5EAA"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:hintTextColor="#4B5EAA"
+        app:endIconMode="dropdown_menu"
+        app:endIconTint="#4B5EAA"
+        app:endIconDrawable="@android:drawable/arrow_down_float"
+        app:layout_constraintTop_toTopOf="@id/class_layout"
+        app:layout_constraintStart_toEndOf="@id/class_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/section_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:inputType="none"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#1A1A1A"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Date Picker -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/date_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Select Date (YYYY-MM-DD)"
+        app:boxStrokeColor="#4B5EAA"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:hintTextColor="#4B5EAA"
+        app:layout_constraintTop_toBottomOf="@id/class_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:inputType="none"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#1A1A1A"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Students Container -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/students_scroll_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/date_layout"
+        app:layout_constraintBottom_toTopOf="@id/submit_attendance_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/students_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" />
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Loading Spinner -->
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="#4B5EAA"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Submit Attendance Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_attendance_button"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="Submit Attendance"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#4B5EAA"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

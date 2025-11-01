@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_studentDashboard_to_announcements" type="id" />
+    <item name="action_studentDashboard_to_assignments" type="id" />
+    <item name="action_studentDashboard_to_examMarks" type="id" />
+    <item name="action_studentDashboard_to_login" type="id" />
+</resources>

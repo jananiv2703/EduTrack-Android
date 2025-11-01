@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/teacherCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!-- Gradient Background -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_background"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Icon and Title Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon Container -->
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/ic_launcher_background">
+
+                    <ImageView
+                        android:id="@+id/cardIconImageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_announcement"
+                        android:tint="#FFFFFF"
+                        android:contentDescription="Card Icon" />
+                </LinearLayout>
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/teacherCardTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="Title"
+                    android:textColor="#1E3A8A"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
+
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/teacherCardDescriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Description"
+                android:textColor="#4B5563"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins" />
+
+        </LinearLayout>
+
+        <!-- Count Badge (Positioned on Top-Right) -->
+        <TextView
+            android:id="@+id/announcementCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-12dp"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/badge_background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

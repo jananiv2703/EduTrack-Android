@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="80dp"
+    android:viewportWidth="360"
+    android:viewportHeight="80">
+
+    <!-- Background Gradient -->
+    <path
+        android:pathData="M0,0 H360 V80 H0 Z M180,0 A30,30 0 0,1 150,0 H0 V80 H360 V0 H210 A30,30 0 0,1 180,0 Z"
+        android:fillColor="#001b1c">
+        <gradient
+            android:startColor="#001b1c"
+            android:endColor="#4cd7d0"
+            android:angle="135" />
+    </path>
+
+    <!-- Shadow -->
+    <path
+        android:pathData="M0,0 H360 V80 H0 Z M180,0 A30,30 0 0,1 150,0 H0 V80 H360 V0 H210 A30,30 0 0,1 180,0 Z"
+        android:fillColor="#20000000" />
+
+</vector>

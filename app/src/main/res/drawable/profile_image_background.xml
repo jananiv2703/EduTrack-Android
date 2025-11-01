@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient Ring -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#FFBBDEFB"
+                android:endColor="#FF3F51B5"
+                android:angle="45" />
+            <size
+                android:width="140dp"
+                android:height="140dp" />
+        </shape>
+    </item>
+    <!-- Inner Circle (Profile Image Placeholder) -->
+    <item
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="8dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFFFF" />
+        </shape>
+    </item>
+</layer-list>

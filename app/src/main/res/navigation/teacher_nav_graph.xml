@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teacher_nav_graph"
+    app:startDestination="@id/teacherDashboardFragment">
+
+    <!-- Teacher Dashboard Fragment -->
+    <fragment
+        android:id="@+id/teacherDashboardFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherDashboardFragment"
+        android:label="Teacher Dashboard"
+        tools:layout="@layout/fragment_teacher_dashboard">
+        <action
+            android:id="@+id/action_teacherdashboard_to_teacherLogin"
+            app:destination="@id/teacherLoginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_profileManagement"
+            app:destination="@id/teacherProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_viewStudents"
+            app:destination="@id/teacherViewStudentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_attendanceManagement"
+            app:destination="@id/teacherAttendanceManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_manageStudents"
+            app:destination="@id/teacherManageStudentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_announcements"
+            app:destination="@id/teacherAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_assignments"
+            app:destination="@id/teacherAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_timeTable"
+            app:destination="@id/teacherTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_examMarks"
+            app:destination="@id/teacherExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_conductQuiz"
+            app:destination="@id/teacherConductQuizFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_teacherDashboard_to_leaveManagement"
+            app:destination="@id/teacherLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Profile Management Fragment -->
+    <fragment
+        android:id="@+id/teacherProfileManagementFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherProfileManagementFragment"
+        android:label="Profile Management">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherProfileManagement_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher View Students Fragment -->
+    <fragment
+        android:id="@+id/teacherViewStudentsFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherViewStudentsFragment"
+        android:label="View Students">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherViewStudents_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Attendance Management Fragment -->
+    <fragment
+        android:id="@+id/teacherAttendanceManagementFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherAttendanceManagementFragment"
+        android:label="Attendance Management">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherAttendanceManagement_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Manage Students Fragment -->
+    <fragment
+        android:id="@+id/teacherManageStudentsFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherManageStudentsFragment"
+        android:label="Manage Students">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherManageStudents_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Announcements Fragment -->
+    <fragment
+        android:id="@+id/teacherAnnouncementsFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherAnnouncementsFragment"
+        android:label="Announcements">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherAnnouncements_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Assignments Fragment -->
+    <fragment
+        android:id="@+id/teacherAssignmentsFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherAssignmentsFragment"
+        android:label="Assignments / Homework">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherAssignments_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Time Table Fragment -->
+    <fragment
+        android:id="@+id/teacherTimeTableFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherTimeTableFragment"
+        android:label="Time Table">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherTimeTable_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Exam Marks Fragment -->
+    <fragment
+        android:id="@+id/teacherExamMarksFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherExamMarksFragment"
+        android:label="Exam / Marks Management">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherExamMarks_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Conduct Quiz Fragment -->
+    <fragment
+        android:id="@+id/teacherConductQuizFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherConductQuizFragment"
+        android:label="Conduct Quiz">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherConductQuiz_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Teacher Leave Management Fragment -->
+    <fragment
+        android:id="@+id/teacherLeaveManagementFragment"
+        android:name="com.school.edutrack.ui.teacher.TeacherLeaveManagementFragment"
+        android:label="Leave Management">
+        <argument
+            android:name="teacherId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_teacherLeaveManagement_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>

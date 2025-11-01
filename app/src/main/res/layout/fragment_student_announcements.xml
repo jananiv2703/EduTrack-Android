@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: Student ID -->
+        <TextView
+            android:id="@+id/student_id_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Announcements - Student ID: STU990"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <!-- Loading Spinner -->
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- No Announcements Message -->
+        <TextView
+            android:id="@+id/no_announcements_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="No announcements available"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- Announcements Container -->
+        <LinearLayout
+            android:id="@+id/announcements_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- Load More Button -->
+        <Button
+            android:id="@+id/load_more_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="Load More"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

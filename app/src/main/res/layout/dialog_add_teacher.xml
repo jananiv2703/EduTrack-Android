@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add/Edit Teacher"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing="0.02"
+                    android:layout_marginBottom="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher ID *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/teacher_id_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Teacher ID"
+                    android:inputType="text"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Full Name"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/email_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Email Address"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/class_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Class (e.g., 10)"
+                    android:inputType="text"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Section *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/section_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Section (e.g., A)"
+                    android:inputType="text"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/subject_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Subject"
+                    android:inputType="text"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Joining *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:id="@+id/doj_input"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="Select Date (YYYY-MM-DD)"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        android:contentDescription="Select Date"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class Teacher *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/class_teacher_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:entries="@array/class_teacher_options"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/gender_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Gender (e.g., Male/Female)"
+                    android:inputType="text"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/mobile_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="phone"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/address_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:hint="Enter Address"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password *"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/button_background"
+                        android:text="Cancel"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingHorizontal="24dp"
+                        style="@style/CustomButton" />
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button_background"
+                        android:text="Save"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingHorizontal="24dp"
+                        style="@style/CustomButton" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

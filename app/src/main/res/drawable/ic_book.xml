@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Book cover -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M20,20 H80 V80 H20 Z" />
+    <!-- Book pages -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,25 H75 V75 H25 Z" />
+    <!-- Book spine curve -->
+    <path
+        android:fillColor="#DAA520"
+        android:pathData="M20,20 H30 V80 H20 Z" />
+</vector>

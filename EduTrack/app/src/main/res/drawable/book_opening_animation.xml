@@ -1,0 +1,5 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/book_closed" android:duration="500" />
+    <item android:drawable="@drawable/book_opening" android:duration="500" />
+    <item android:drawable="@drawable/book_open_with_pen" android:duration="500" />
+</animation-list>

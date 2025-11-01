@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="411dp"
+    android:height="240dp"
+    android:viewportWidth="411"
+    android:viewportHeight="240">
+    <!-- Main wave with gradient -->
+    <path
+        android:pathData="M0,180 C30,150 90,210 137,180 C184,150 224,210 274,180 C324,150 381,210 411,180 L411,240 L0,240 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="180"
+                android:endX="411"
+                android:endY="240"
+                android:type="linear">
+                <item android:offset="0" android:color="#FF3B82AF"/>
+                <item android:offset="1" android:color="#FF1E4D6B"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Secondary wave layer for depth -->
+    <path
+        android:pathData="M0,190 C40,160 100,220 137,190 C174,160 234,220 274,190 C314,160 371,220 411,190 L411,240 L0,240 Z"
+        android:fillColor="#33FFFFFF"
+        android:fillAlpha="0.3"/>
+    <!-- Tertiary wave layer for foam effect -->
+    <path
+        android:pathData="M0,175 C35,145 95,205 137,175 C179,145 229,205 274,175 C319,145 376,205 411,175 L411,190 L0,190 Z"
+        android:fillColor="#1AFFFFFF"
+        android:fillAlpha="0.2"/>
+</vector>

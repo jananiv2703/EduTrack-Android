@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Notifications Section -->
+        <TextView
+            android:id="@+id/notifications_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/toggle_notifications_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#6200EA"
+            android:textColor="#FFFFFF"
+            android:text="Toggle Notifications"
+            app:layout_constraintTop_toBottomOf="@id/notifications_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Fee Structure Section -->
+        <TextView
+            android:id="@+id/fee_management_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Manage Fee Structures"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/toggle_notifications_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
+            android:id="@+id/class_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintTop_toBottomOf="@id/fee_management_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
+            android:id="@+id/fee_type_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintTop_toBottomOf="@id/class_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/custom_fee_type_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Enter Custom Fee Type"
+            android:inputType="text"
+            android:enabled="false"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/fee_type_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/amount_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Amount (e.g., 1500.00)"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/custom_fee_type_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/deadline_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Select Deadline (YYYY-MM-DD)"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/amount_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/add_fee_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#6200EA"
+            android:textColor="#FFFFFF"
+            android:text="Add Fee Structure"
+            app:layout_constraintTop_toBottomOf="@id/deadline_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/update_fee_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#3700B3"
+            android:textColor="#FFFFFF"
+            android:text="Update Fee Structure"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@id/add_fee_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/delete_fee_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF"
+            android:text="Delete Fee Structure"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@id/update_fee_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fee_structures_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/delete_fee_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

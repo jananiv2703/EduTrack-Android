@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.EduTrack" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/toolbar_background</item>
+        <item name="colorPrimaryVariant">@color/toolbar_background</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/toolbar_background</item>
+        <item name="colorSecondaryVariant">@color/toolbar_background</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+    </style>
+
+    <!-- NoActionBar variant of the theme -->
+    <style name="Theme.EduTrack.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/toolbar_background</item>
+        <item name="colorPrimaryVariant">@color/toolbar_background</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/toolbar_background</item>
+        <item name="colorSecondaryVariant">@color/toolbar_background</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="android:statusBarColor">@color/design_default_color_primary</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- Custom Button Style -->
+    <style name="CustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="rippleColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Custom FAB Style -->
+    <style name="CustomFab" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/toolbar_background</item>
+        <item name="tint">@android:color/white</item>
+        <item name="elevation">6dp</item>
+        <item name="hoveredFocusedTranslationZ">10dp</item>
+    </style>
+
+    <!-- Poppins Text Styles -->
+    <style name="TextStyle.Poppins" parent="">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TextStyle.Poppins.Bold" parent="TextStyle.Poppins">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@android:color/holo_blue_dark</item>
+        <item name="colorPrimaryDark">@android:color/holo_blue_dark</item>
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+    </style>
+
+    <!-- Theme for activities with a custom Toolbar (No ActionBar) -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@android:color/holo_blue_dark</item>
+        <item name="colorPrimaryDark">@android:color/holo_blue_dark</item>
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+    </style>
+
+    <!-- Existing style for dark action bar overlay -->
+    <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <!-- Tab Style -->
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/accentColor</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="tabSelectedTextColor">@color/primaryDarkColor</item>
+        <item name="tabTextColor">@color/textSecondary</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">start</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="TimetableCard">
+        <item name="android:layout_margin">8dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/cardBackground</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TitleText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="SubtitleText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowElevation">0dp</item>
+        <item name="android:background">@color/white</item> <!-- Solid white background -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="Widget.Theme.EduTrack.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="BottomNavTextActive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="BottomNavTextInactive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">#B0BEC5</item>
+    </style>
+    <style name="Widget.Custom.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_selector</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:background">@drawable/rounded_bottom_nav_background</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="itemBackground">@drawable/selector_nav_item_background</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+
+
+</resources>

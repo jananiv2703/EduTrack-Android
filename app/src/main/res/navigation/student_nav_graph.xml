@@ -1,0 +1,1486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/student_nav_graph"
+    app:startDestination="@id/studentDashboardFragment">
+
+    <!-- Global Actions -->
+    <action
+        android:id="@+id/action_global_studentDashboardFragment"
+        app:destination="@id/studentDashboardFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentProfileManagementFragment"
+        app:destination="@id/studentProfileManagementFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentAnnouncementsFragment"
+        app:destination="@id/studentAnnouncementsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentAttendanceViewFragment"
+        app:destination="@id/studentAttendanceViewFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentAssignmentsFragment"
+        app:destination="@id/studentAssignmentsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentTimeTableFragment"
+        app:destination="@id/studentTimeTableFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentExamMarksFragment"
+        app:destination="@id/studentExamMarksFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentLeaveManagementFragment"
+        app:destination="@id/studentLeaveManagementFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentPaymentsFragment"
+        app:destination="@id/studentPaymentsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/studentDashboardFragment"
+        app:popUpToInclusive="false">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentStudyMaterialsFragment"
+        app:destination="@id/studentStudyMaterialsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/studentDashboardFragment"
+        app:popUpToInclusive="false">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentQuizzesFragment"
+        app:destination="@id/studentQuizzesFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/studentDashboardFragment"
+        app:popUpToInclusive="false">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </action>
+    <action
+        android:id="@+id/action_global_studentLogin"
+        app:destination="@id/studentLoginFragment"
+        app:popUpTo="@id/student_nav_graph"
+        app:popUpToInclusive="true"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <!-- Student Dashboard Fragment -->
+    <fragment
+        android:id="@+id/studentDashboardFragment"
+        android:name="com.school.edutrack.ui.student.StudentDashboardFragment"
+        android:label="Student Dashboard"
+        tools:layout="@layout/fragment_student_dashboard">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentDashboard_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentDashboard_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Profile Management Fragment -->
+    <fragment
+        android:id="@+id/studentProfileManagementFragment"
+        android:name="com.school.edutrack.ui.student.StudentProfileManagementFragment"
+        android:label="Profile Management"
+        tools:layout="@layout/fragment_student_profile_management">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentProfileManagement_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentProfileManagement_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Announcements Fragment -->
+    <fragment
+        android:id="@+id/studentAnnouncementsFragment"
+        android:name="com.school.edutrack.ui.student.StudentAnnouncementsFragment"
+        android:label="Announcements"
+        tools:layout="@layout/fragment_student_announcements">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentAnnouncements_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAnnouncements_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Attendance View Fragment -->
+    <fragment
+        android:id="@+id/studentAttendanceViewFragment"
+        android:name="com.school.edutrack.ui.student.StudentAttendanceViewFragment"
+        android:label="Attendance View"
+        tools:layout="@layout/fragment_student_attendance_view">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentAttendanceView_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAttendanceView_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Assignments Fragment -->
+    <fragment
+        android:id="@+id/studentAssignmentsFragment"
+        android:name="com.school.edutrack.ui.student.StudentAssignmentsFragment"
+        android:label="Assignments / Homework"
+        tools:layout="@layout/fragment_student_assignments">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentAssignments_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentAssignments_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Time Table Fragment -->
+    <fragment
+        android:id="@+id/studentTimeTableFragment"
+        android:name="com.school.edutrack.ui.student.StudentTimeTableFragment"
+        android:label="Time Table"
+        tools:layout="@layout/fragment_student_time_table">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentTimeTable_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentTimeTable_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Exam Marks Fragment -->
+    <fragment
+        android:id="@+id/studentExamMarksFragment"
+        android:name="com.school.edutrack.ui.student.StudentExamMarksFragment"
+        android:label="Exam / Marks View"
+        tools:layout="@layout/fragment_student_exam_marks">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentExamMarks_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentExamMarks_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Leave Management Fragment -->
+    <fragment
+        android:id="@+id/studentLeaveManagementFragment"
+        android:name="com.school.edutrack.ui.student.StudentLeaveManagementFragment"
+        android:label="Leave Management"
+        tools:layout="@layout/fragment_student_leave_management">
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentLeaveManagement_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Payments Fragment -->
+    <fragment
+        android:id="@+id/studentPaymentsFragment"
+        android:name="com.school.edutrack.ui.student.StudentPaymentsFragment"
+        android:label="Payments"
+        tools:layout="@layout/fragment_student_payments">
+        <argument
+            android:name="studentId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_studentPayments_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentPayments_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Study Materials Fragment -->
+    <fragment
+        android:id="@+id/studentStudyMaterialsFragment"
+        android:name="com.school.edutrack.ui.student.StudentStudyMaterialsFragment"
+        android:label="Study Materials"
+        tools:layout="@layout/fragment_student_study_materials">
+        <argument
+            android:name="studentId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentStudyMaterials_to_quizzes"
+            app:destination="@id/studentQuizzesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Quizzes Fragment -->
+    <fragment
+        android:id="@+id/studentQuizzesFragment"
+        android:name="com.school.edutrack.ui.student.StudentQuizzesFragment"
+        android:label="Quizzes"
+        tools:layout="@layout/fragment_student_quizzes">
+        <argument
+            android:name="studentId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_studentQuizzes_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_profileManagement"
+            app:destination="@id/studentProfileManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_announcements"
+            app:destination="@id/studentAnnouncementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_attendanceView"
+            app:destination="@id/studentAttendanceViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_assignments"
+            app:destination="@id/studentAssignmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_timeTable"
+            app:destination="@id/studentTimeTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_examMarks"
+            app:destination="@id/studentExamMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_leaveManagement"
+            app:destination="@id/studentLeaveManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_payments"
+            app:destination="@id/studentPaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentQuizzes_to_studyMaterials"
+            app:destination="@id/studentStudyMaterialsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Student Login Fragment -->
+    <fragment
+        android:id="@+id/studentLoginFragment"
+        android:name="com.school.edutrack.ui.student.StudentLoginFragment"
+        android:label="Student Login"
+        tools:layout="@layout/fragment_student_login" />
+</navigation>

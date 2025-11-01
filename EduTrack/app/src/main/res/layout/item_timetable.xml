@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/teacher_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher: "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day: "
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/period_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period: "
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/subject_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject: "
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/class_section_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class and Section: "
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

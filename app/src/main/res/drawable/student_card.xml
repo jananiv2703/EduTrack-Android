@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardUseCompatPadding="true">
+
+    <!-- Card Background Gradient (res/drawable/card_background_gradient.xml) -->
+    <!-- res/drawable/card_background_gradient.xml:
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <gradient
+            android:startColor="#FFFFFF"
+            android:endColor="#F9FAFB"
+            android:angle="270"/>
+        <corners android:radius="20dp"/>
+    </shape>
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/wave_background"
+        android:padding="20dp">
+
+        <!-- Compact View -->
+        <LinearLayout
+            android:id="@+id/compact_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <!-- Student Name -->
+            <TextView
+                android:id="@+id/student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#1A237E"
+                android:fontFamily="@font/poppins"
+                android:letterSpacing="0.02" />
+
+            <!-- Register Number -->
+            <TextView
+                android:id="@+id/register_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Reg: N/A"
+                android:textSize="14sp"
+                android:textColor="#546E7A"
+                android:fontFamily="@font/poppins"
+                android:letterSpacing="0.01" />
+        </LinearLayout>
+
+        <!-- Divider with Gradient (res/drawable/divider_gradient.xml) -->
+        <!-- res/drawable/divider_gradient.xml:
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient
+                android:startColor="#E0E0E0"
+                android:endColor="#B0BEC5"
+                android:angle="0"/>
+            <size android:height="1dp"/>
+        </shape>
+        -->
+        <View
+            android:id="@+id/compact_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/wave_background" />
+
+        <!-- Expanded View -->
+        <LinearLayout
+            android:id="@+id/expanded_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

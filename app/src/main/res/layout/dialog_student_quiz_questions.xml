@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/student_dialog_quiz_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="12dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <ProgressBar
+            android:id="@+id/quiz_timer_progress"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:progressDrawable="@drawable/circular_timer"
+            android:max="100"
+            android:progress="100"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+        <TextView
+            android:id="@+id/quiz_timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="02:00"
+            android:textSize="14sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/student_questions_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="400dp"/>
+
+    <Button
+        android:id="@+id/student_submit_quiz_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Submit Quiz"
+        android:background="@drawable/gradient_button"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"/>
+</LinearLayout>

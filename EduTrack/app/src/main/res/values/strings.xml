@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">EduTrack</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="class_filter_options">
+        <item>All Classes</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
+        <item>Class 6</item>
+        <item>Class 7</item>
+        <item>Class 8</item>
+        <item>Class 9</item>
+        <item>Class 10</item>
+        <item>Class 11</item>
+        <item>Class 12</item>
+    </string-array>
+    <string-array name="section_filter_options">
+        <item>All Sections</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+    <string name="select_teacher">Select Teacher</string>
+    <!-- Add subjects array -->
+    <string-array name="subject_options">
+        <item>Select Subject</item>
+        <item>Mathematics</item>
+        <item>Science</item>
+        <item>English</item>
+        <item>History</item>
+        <item>Geography</item>
+        <item>Physical Education</item>
+    </string-array>
+    <string name="select_day">Select Day</string>
+    <string name="select_period">Select Period</string>
+    <string name="select_subject">Select Subject</string>
+    <string name="select_class">Select Class</string>
+    <string name="select_section">Select Section</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="admin_name_placeholder">Admin Name</string>
+    <string name="admin_role_placeholder">Admin</string>
+    <string name="welcome_message">Welcome</string>
+    <string name="edutrack_logo_description">EduTrack Application Logo</string>
+    <string name="admin_profile_description">Admin Profile Picture</string>
+    <string name="open_drawer_description">Open Navigation Drawer Menu</string>
+    <string name="bottom_nav_description">Bottom Navigation Menu</string>
+    <string-array name="role_options">
+        <item>All</item>
+        <item>Teacher</item>
+        <item>Student</item>
+    </string-array>
+</resources>
