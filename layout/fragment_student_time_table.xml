@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <!-- Student ID Display -->
+<!--    <TextView-->
+<!--        android:id="@+id/student_id_display"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Time Table - Student ID: STU123"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="@color/header_text_color"-->
+<!--        android:paddingBottom="16dp"-->
+<!--        android:gravity="center" />-->
+
+    <!-- Day Tabs -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:background="@color/day_tab_container_background">
+
+            <TextView
+                android:id="@+id/day_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday"
+                android:background="@drawable/day_tab_unselected"
+                android:textColor="@color/day_tab_unselected"
+                android:textSize="16sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/day_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuesday"
+                android:background="@drawable/day_tab_unselected"
+                android:textColor="@color/day_tab_unselected"
+                android:textSize="16sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/day_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday"
+                android:background="@drawable/day_tab_unselected"
+                android:textColor="@color/day_tab_unselected"
+                android:textSize="16sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/day_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday"
+                android:background="@drawable/day_tab_unselected"
+                android:textColor="@color/day_tab_unselected"
+                android:textSize="16sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/day_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday"
+                android:background="@drawable/day_tab_unselected"
+                android:textColor="@color/day_tab_unselected"
+                android:textSize="16sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Timetable Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/timetable_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/transparent" />
+
+    </ScrollView>
+
+</LinearLayout>

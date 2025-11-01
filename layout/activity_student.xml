@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <!-- Header Container -->
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="406dp"
+        android:layout_height="176dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Left Half: EduTrack Logo (No Wave Background) -->
+
+        <!-- Right Half: Wave Background with Student Info -->
+        <FrameLayout
+            android:id="@+id/logo_container"
+            android:layout_width="26dp"
+            android:layout_height="179dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/edutrack_logo"
+                android:layout_width="71dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="12dp"
+                android:contentDescription="EduTrack Logo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_eduheader" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/wave_container"
+            android:layout_width="200dp"
+            android:layout_height="190dp"
+            android:layout_weight="1">
+
+            <!-- Wave Background -->
+            <ImageView
+                android:id="@+id/wave_background"
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wave_background" />
+
+            <!-- Student Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Thursday, June 12, 2025, 07:08 PM"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/student_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:maxLines="1"
+                        android:text="Jane Doe"
+                        android:textColor="@android:color/white"
+                        android:textSize="35sp" />
+
+                    <TextView
+                        android:id="@+id/admin_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Student"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        style="@style/TextStyle.Poppins" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/studentProfileImageView"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/teacher_circle_background"
+                    android:clipToOutline="true"
+                    android:contentDescription="Student Profile"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_studentprofile" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Horizontal Scrollable Menu -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_container">
+
+        <LinearLayout
+            android:id="@+id/menuItemsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <!-- Dashboard -->
+            <LinearLayout
+                android:id="@+id/menu_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Dashboard Icon"
+                    android:src="@drawable/ic_dashboard" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Dashboard"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Profile Management -->
+            <LinearLayout
+                android:id="@+id/menu_profile_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Profile Management Icon"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Profile"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Announcements -->
+            <LinearLayout
+                android:id="@+id/menu_announcements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Announcements Icon"
+                    android:src="@drawable/ic_announcement" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Announcements"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Attendance View -->
+            <LinearLayout
+                android:id="@+id/menu_attendance_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Attendance View Icon"
+                    android:src="@drawable/ic_attendance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Attendance"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Assignments -->
+            <LinearLayout
+                android:id="@+id/menu_assignments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Assignments Icon"
+                    android:src="@drawable/ic_assignment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Assignments"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Time Table -->
+            <LinearLayout
+                android:id="@+id/menu_time_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Time Table Icon"
+                    android:src="@drawable/ic_timetable" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Time Table"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Exam Marks -->
+            <LinearLayout
+                android:id="@+id/menu_exam_marks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Exam Marks Icon"
+                    android:src="@drawable/ic_marksd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Exam Marks"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Leave Management -->
+            <LinearLayout
+                android:id="@+id/menu_leave_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Leave Management Icon"
+                    android:src="@drawable/ic_leave" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Leave"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Payments -->
+            <LinearLayout
+                android:id="@+id/menu_payments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Payments Icon"
+                    android:src="@drawable/ic_fee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Payments"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Study Materials -->
+            <LinearLayout
+                android:id="@+id/menu_study_materials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Study Materials Icon"
+                    android:src="@drawable/ic_studymaterials" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Study Materials"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Quizzes -->
+            <LinearLayout
+                android:id="@+id/menu_quizzes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Quizzes Icon"
+                    android:src="@drawable/ic_quiz" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Quizzes"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Logout -->
+            <LinearLayout
+                android:id="@+id/menu_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/menu_item_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:tag="menu_item">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="Logout Icon"
+                    android:src="@drawable/ic_studentlogout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Logout"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/studentNavHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontalMenu"
+        app:layout_constraintBottom_toTopOf="@id/studentBottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/student_nav_graph"
+        app:defaultNavHost="true" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/studentBottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/active_background_gradient"
+        app:itemIconTint="@drawable/bottom_nav_icon_tint"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/student_bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

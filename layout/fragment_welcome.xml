@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    tools:context=".ui.WelcomeFragment">
+
+    <!-- Gradient Background -->
+    <View
+        android:id="@+id/gradientBackground"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/gradient_wave_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Wave Background Layers -->
+    <ImageView
+        android:id="@+id/waveBackground1"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/wave_background_1"
+        android:scaleType="fitXY"
+        android:alpha="0.7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/waveBackground2"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:src="@drawable/wave_background_2"
+        android:scaleType="fitXY"
+        android:alpha="0.6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/waveBackground3"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/wave_background_3"
+        android:scaleType="fitXY"
+        android:alpha="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" /> <!-- Fixed typo: "paren+t" to "parent" -->
+
+    <ImageView
+        android:id="@+id/waveBackground4"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/wave_background_2"
+        android:scaleType="fitXY"
+        android:alpha="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/waveBackground5"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/wave_background_3"
+        android:scaleType="fitXY"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/textViewTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#80FFFFFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="Learn. Teach. Manage. Together"
+        android:textColor="#EDEDED"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main Image (EduTrack Logo or Rocket) -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="288dp"
+        android:layout_height="234dp"
+        android:src="@drawable/ic_edu"
+    app:layout_constraintBottom_toTopOf="@id/adminButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textViewTagline"
+    app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Admin Button -->
+    <ImageButton
+        android:id="@+id/adminButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/transparent"
+    android:contentDescription="Admin Role"
+    android:elevation="4dp"
+    android:src="@drawable/adminlogo"
+    android:tag="admin"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/studentButton"
+    app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
+    app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/adminLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Admin"
+        android:textSize="14sp"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/adminButton"
+        app:layout_constraintStart_toStartOf="@id/adminButton"
+        app:layout_constraintEnd_toEndOf="@id/adminButton" />
+
+    <!-- Student Button -->
+    <ImageButton
+        android:id="@+id/studentButton"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Student Role"
+        android:elevation="4dp"
+        android:src="@drawable/ic_studentloginlogo"
+        android:tag="student"
+        app:layout_constraintBottom_toBottomOf="@id/adminButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/adminButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/studentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Student"
+        android:textSize="14sp"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/studentButton"
+        app:layout_constraintStart_toStartOf="@id/studentButton"
+        app:layout_constraintEnd_toEndOf="@id/studentButton" />
+
+    <!-- Teacher Button -->
+    <ImageButton
+        android:id="@+id/teacherButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:background="@android:color/transparent"
+    android:src="@drawable/ic_teacherloginlogo"
+    android:tag="teacher"
+    android:elevation="4dp"
+    android:contentDescription="Teacher Role"
+    app:layout_constraintBottom_toBottomOf="@id/studentButton"
+    app:layout_constraintStart_toEndOf="@id/studentButton"
+    app:layout_constraintTop_toTopOf="@id/studentButton" />
+
+    <TextView
+        android:id="@+id/teacherLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Teacher"
+        android:textSize="14sp"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/teacherButton"
+        app:layout_constraintStart_toStartOf="@id/teacherButton"
+        app:layout_constraintEnd_toEndOf="@id/teacherButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/student_question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question Text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:fontFamily="sans-serif-medium"/>
+
+    <RadioGroup
+        android:id="@+id/student_options_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <RadioButton
+            android:id="@+id/student_option_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option A"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/student_option_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option B"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/student_option_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option C"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/student_option_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option D"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#E0E0E0"/>
+</LinearLayout>

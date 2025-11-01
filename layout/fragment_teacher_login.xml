@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <!-- Wave Background -->
+    <ImageView
+        android:id="@+id/waveBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wave_background_curved"
+        app:layout_constraintBottom_toTopOf="@id/login_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/edutrackLogo"
+        android:layout_width="68dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/edutrack_logo_description"
+        android:src="@drawable/ic_eduheader"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/waveBackground" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="Teacher Login"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edutrackLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/taglineTextView"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/taglineTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Empower Learning with Teacher Access"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/login_card"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Login Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/login_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_card_gradient"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Login Mode Toggle -->
+            <RadioGroup
+                android:id="@+id/loginModeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <RadioButton
+                    android:id="@+id/passwordLoginRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:buttonTint="#2196F3"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins"
+                    android:text="Password Login"
+                    android:textColor="#424242" />
+
+                <RadioButton
+                    android:id="@+id/pinLoginRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#2196F3"
+                    android:fontFamily="@font/poppins"
+                    android:text="PIN Login"
+                    android:textColor="#424242" />
+            </RadioGroup>
+
+            <!-- Teacher ID Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/teacherIdInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#2196F3"
+                app:hintTextColor="#2196F3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/teacherIdEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2196F3"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Teacher ID"
+                    android:inputType="text"
+                    android:textColor="#424242" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ViewFlipper for Login Modes -->
+            <ViewFlipper
+                android:id="@+id/loginModeFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <!-- Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="#2196F3"
+                    app:hintTextColor="#2196F3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#2196F3"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="#424242" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- PIN Input Fields -->
+                <LinearLayout
+                    android:id="@+id/pinInputContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/pinDigit1"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/pin_digit_background"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusForward="@id/pinDigit2"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinDigit2"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/pin_digit_background"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusForward="@id/pinDigit3"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinDigit3"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/pin_digit_background"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusForward="@id/pinDigit4"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinDigit4"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/pin_digit_background"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusForward="@id/pinDigit5"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinDigit5"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/pin_digit_background"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusForward="@id/pinDigit6"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinDigit6"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/pin_digit_background"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </ViewFlipper>
+
+            <!-- Login Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/login_button_gradient"
+                android:backgroundTint="@null"
+                android:fontFamily="@font/poppins"
+                android:text="Login"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:rippleColor="#80FFFFFF" />
+
+            <!-- Forgot PIN/Password -->
+            <TextView
+                android:id="@+id/forgotPinTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins"
+                android:padding="8dp"
+                android:text="Forgot PIN/Password?"
+                android:textColor="#F44336"
+                android:textSize="14sp" />
+
+            <!-- Back Button -->
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:padding="8dp"
+                android:text="Back"
+                android:textColor="#2196F3"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

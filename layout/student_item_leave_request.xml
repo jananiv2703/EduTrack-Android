@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Leave Dates -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/leave_dates_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="From: YYYY-MM-DD To: YYYY-MM-DD"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <!-- Reason -->
+        <TextView
+            android:id="@+id/reason_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reason: Not specified"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Status with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/status_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Status Icon"/>
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: Unknown"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginEnd="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Proof -->
+        <TextView
+            android:id="@+id/proof_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proof: Not provided"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
